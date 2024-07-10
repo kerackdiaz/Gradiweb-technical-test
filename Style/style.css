@@ -156,7 +156,7 @@ main{
     padding: 16px 0 32px;
 }
 
-#heroHome button{
+#heroHome button, #productProperties button{
     background-color: var(--color-Brand-2);
     color: white;
     font-family: "Neogrotesk Ess", sans-serif;
@@ -172,12 +172,12 @@ main{
     gap: 8px;
 }
 
-#heroHome button svg {
+#heroHome button svg, #productProperties button svg{
     opacity: 0; 
     transition: opacity 0.3s ease; 
 }
 
-#heroHome button:hover svg {
+#heroHome button:hover svg, #productProperties button:hover svg{
     opacity: 1; 
 }
 
@@ -637,4 +637,430 @@ section#homeAboutUs:after {
     color: var(--color-Body);
     font-weight: 500;
     font-size: 13px;
+}
+
+
+
+#homeCategories{
+    display: flex;
+    margin: 70px 0;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#homeCategories h2{
+    line-height: 61.6px;
+    color: var(--color-Body);
+}
+
+#homeCategories p{
+    color: var(--color-Paragraph);
+    line-height: 27px;
+}
+
+#homeCategories div{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+#homeCategories article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    width: 25%;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+
+#homeCategories img{
+    width: 100%;
+}
+#homeCategories .carousel{
+    padding: 0;
+}
+
+
+#homeBenefits{
+    display: flex;
+    margin: 70px 0;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#homeBenefits h2{
+    line-height: 61.6px;
+    color: var(--color-Body);
+}
+
+#homeBenefits ul{
+    gap: 32px;
+    margin-bottom: 50px;
+}
+
+#homeBenefits ul::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-image: url(../Assets/Img/Multimedia/pastillaverde-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    right: -10vw;
+}
+
+#homeBenefits li{
+    color: var(--color-Paragraph);
+    line-height: 27px;
+}
+
+#homeBenefits h3{
+    text-align: center;
+}
+
+#homeBenefits div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#homeBenefits div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 209px;
+    height: 209px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    padding: 0 32px;
+    text-align: center;
+}
+
+#homeBenefits div div:nth-child(1){
+    background-color: #D7F5EE;
+    translate: -13vw 8vh;
+    color: #60AF93;
+}
+#homeBenefits div div:nth-child(1) h3,
+#homeBenefits div div:nth-child(1) p {
+    color: #60AF93;
+}
+
+
+
+#homeBenefits div div:nth-child(3){
+    background-color: #E3F0F6;
+    translate: 13vw 8vh;
+}
+
+#homeBenefits div div:nth-child(3) h3,
+#homeBenefits div div:nth-child(3) p {
+    color: #60A5BF;
+}
+
+#homeBenefits div div:nth-child(4){
+    background-color: #FFE4DE;
+    translate: 0 30vh;
+}
+
+#homeBenefits div div:nth-child(4) h3,
+#homeBenefits div div:nth-child(4) p {
+    color: #F4957C;
+}
+
+#homeBenefits div div h3{
+    font-size: 36px;
+    font-weight: 500;
+    font-family: "filson Pro", sans-serif;
+    line-height: 50.4px;
+    text-align: center;
+}
+
+#productProperties{
+    display: flex;
+    margin: 70px 0;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#productProperties h2{
+    line-height: 72.8px;
+    font-size: 52px;
+    color: var(--color-Body);
+    text-align: center;
+    width: 40%;
+}
+
+#productProperties p{
+    color: var(--color-Brand-2);
+    line-height: 28.8px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#productProperties div{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    width: 100%;
+}
+#productProperties div div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    width: 50%;
+}
+
+#productProperties ul{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 32px;
+}
+
+#productProperties ul li{
+    list-style-image: url(../Assets/Img/Multimedia/listIcon.png);
+    color: var(--color-Paragraph);
+    line-height: 27px;
+    font-size: 15px;
+    font-weight: 500;
+    
+}
+
+#productProperties img{
+    width: 60%;
+}
+
+
+
+#logoCarrousel {
+    width: 100%;
+    height: 134px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin: 70px 0;
+}
+
+#logoCarrousel:before, #logoCarrousel:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+#logoCarrousel:before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, rgba(255,255,255,0));
+}
+
+#logoCarrousel:after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, rgba(255,255,255,0));
+}
+
+#logoCarrousel ul {
+    display: flex;
+    gap: 16px;
+    animation: slides 50s linear infinite;
+}
+
+#logoCarrousel li {
+    font-family: "Neogrotesk Ess", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 200px;
+}
+
+#logoCarrousel li p {
+    margin-bottom: 10px;
+}
+
+
+
+
+#logoCarrousel:hover ul {
+    animation-play-state: paused;
+}
+
+
+#homeSocialMedia{
+    display: flex;
+    margin: 70px 0;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#homeSocialMedia h2{
+    line-height: 61.6px;
+    color: #1F2121;
+}
+
+#homeSocialMedia p{
+    color: var(--color-Paragraph);
+    line-height: 27px;
+    width: 70%;
+    text-align: center;
+}
+
+#homeSocialMedia ul{
+    gap: 32px;
+    align-items: center;
+
+}
+
+#homeSocialMedia ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+#homeSocialMedia a p{
+    width: 100%;
+    font-size: 13px;
+    color: var(--color-Body);
+}
+
+#socialCarrousel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#socialCarrousel:before, #socialCarrousel:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+#socialCarrousel:before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, rgba(255,255,255,0));
+}
+
+#socialCarrousel:after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, rgba(255,255,255,0));
+}
+
+#socialCarrousel ul {
+    display: flex;
+    gap: 32px;
+    animation: slides 40s linear infinite;
+}
+
+#socialCarrousel li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#newsletter{
+    display: flex;
+    margin: 70px 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-image: url(../Assets/Img/Multimedia/newsletterBG.jpg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+}
+
+#newsletter h2{
+        width: 40%;
+        text-align: center;
+    }
+
+#newsletter p{
+    color: var(--color-Paragraph);
+    line-height: 27px;
+    width: 20%;
+    text-align: center;
+}
+
+#newsletter input#email{
+    gap: 16px;
+    width: 360px;
+    height: 46px;
+    border-radius: 100px;
+    border: 1px solid var(--color-Brand-1);
+    padding: 0 16px;
+}
+
+#newsletter button{
+    background-color: var(--color-Brand-1);
+    color: white;
+    font-family: "Neogrotesk Ess", sans-serif;
+    font-size: 18px;
+    border-radius: 100px;
+    width: 153px;
+    height: 48px;
+    border: 1px;
+    padding: 12px, 40px, 12px, 40px;
+    opacity: 0.9;
+    line-height: 23.8px;
+    transition: transform 0.3s ease; 
+}
+
+#newsletter button:hover {
+    transform: scale(0.9);
+}
+
+
+.message {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    width: 400px;
+    height: 100px;
+    background: var(--color-Brand-1);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-Brand-1);
+    box-shadow: 0px 4px 4px 0 #0000000D;
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.message p {
+    color: var(--color-Brand-1-Pale-2);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.message-active {
+    opacity: 1; 
 }

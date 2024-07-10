@@ -2,7 +2,25 @@ import { store } from "./fetch.js";
 const products = store.products.nodes;
 console.log(products);
 
-// //this function create a carrousell with the products
+function cloneCarouselItems(carouselSelector) {
+    const carousel = document.querySelector(`${carouselSelector} ul`);
+    const items = document.querySelectorAll(`${carouselSelector} ul li`);
+
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        carousel.appendChild(clone);
+    });
+
+    carousel.style.maxWidth = '99vw';
+}
+
+cloneCarouselItems('#heroCarrousel');
+cloneCarouselItems('#logoCarrousel');
+cloneCarouselItems('#socialCarrousel');
+
+
+
+//this function create a carrousell with the products
 function Carousel() {
     if (products.length > 0) {
         const container = document.getElementById("productsContainer");
@@ -186,3 +204,24 @@ renderProducts();
 Carousel();
 
 triggerPurchaseDetail();
+
+const newsLetter = document.querySelector('#newsletter form');
+
+
+newsLetter.addEventListener('submit',function(e){
+    e.preventDefault();
+    const main = document.querySelector('main');
+    const message = document.createElement('div');
+    message.classList.add('message');
+    message.innerHTML = `<p>Thanks for subscribing to our newsletter!</p>`;
+    if(main.querySelector('.message')){
+        main.removeChild(main.querySelector('.message'));
+    }else{
+        main.appendChild(message);
+        message.classList.add('message-active');
+        setTimeout(() => {
+            main.removeChild(main.querySelector('.message'));
+        }, 3000);}
+    })
+
+
