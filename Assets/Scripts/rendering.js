@@ -1,6 +1,5 @@
 import { store } from "./fetch.js";
 const products = store.products.nodes;
-console.log(products);
 
 function cloneCarouselItems(carouselSelector) {
     const carousel = document.querySelector(`${carouselSelector} ul`);
@@ -14,13 +13,13 @@ function cloneCarouselItems(carouselSelector) {
     carousel.style.maxWidth = '99vw';
 }
 
-cloneCarouselItems('#heroCarrousel');
-cloneCarouselItems('#logoCarrousel');
-cloneCarouselItems('#socialCarrousel');
+cloneCarouselItems('#heroCarousel');
+cloneCarouselItems('#logoCarousel');
+cloneCarouselItems('#socialCarousel');
 
 
 
-//this function create a carrousell with the products
+//this function create a Carousell with the products
 function Carousel() {
     if (products.length > 0) {
         const container = document.getElementById("productsContainer");
@@ -50,7 +49,6 @@ function Carousel() {
         }
         const productCard = productsContainer.querySelector(".productCard");
         const scrollDistance = productCard ? productCard.offsetWidth*2 : 200; 
-        console.log(scrollDistance);
 
         leftButton.addEventListener('click', () => {
             if (productsContainer.scrollLeft <= 0) {
@@ -199,14 +197,9 @@ function createPurchaseDetail(product) {
 
 
 
-renderProducts();
-
-Carousel();
-
-triggerPurchaseDetail();
+//this function create a message when the user subscribe to the newsletter
 
 const newsLetter = document.querySelector('#newsletter form');
-
 
 newsLetter.addEventListener('submit',function(e){
     e.preventDefault();
@@ -222,6 +215,26 @@ newsLetter.addEventListener('submit',function(e){
         setTimeout(() => {
             main.removeChild(main.querySelector('.message'));
         }, 3000);}
-    })
+})
 
 
+
+//this function open and close the nav in movil
+
+const openNav = document.getElementById('movilDropdown');
+const closeNav = document.getElementById('closeNav');
+
+openNav.addEventListener('click', function(){
+    document.getElementById('navMovil').style.display = 'flex';
+});
+closeNav.addEventListener('click', function(){
+    document.getElementById('navMovil').style.display = 'none';
+});
+
+
+
+renderProducts();
+
+Carousel();
+
+triggerPurchaseDetail();
